@@ -54,31 +54,22 @@ def compare(text, be850, bec):
 	return beclist, neither
 
 
-#def checkwordisvalid(word, wordlist):
-#	print (word.upper())
-#	ValidWord = False
-#	First = 0
-#	Last = len(wordlist) - 1
-#	while First <= Last and not ValidWord:
-#		Midpoint = (First + Last)//2
-#		print (wordlist[First])
-#		print(wordlist[Midpoint])
-#		print (wordlist[Last])
-#		if wordlist[Midpoint] == word:
-#			ValidWord = True
-#		else:
-#			if wordlist[Midpoint] < word:
-#				First = Midpoint + 1
-#			else:
-#				Last = Midpoint - 1
-#	print (ValidWord)
-#	return ValidWord
-
 def checkwordisvalid(word, wordlist):
-	for item in wordlist:
-		if word == item:
-			return True
-	return False
+	print (word.upper())
+	ValidWord = False
+	First = 0
+	Last = len(wordlist) - 1
+	while First <= Last and not ValidWord:
+		Midpoint = (First + Last)//2
+		if wordlist[Midpoint] == word:
+			ValidWord = True
+		else:
+			if wordlist[Midpoint] < word:
+				First = Midpoint + 1
+			else:
+				Last = Midpoint - 1
+	print (ValidWord)
+	return ValidWord
 
 def endscreen(beclist, neither):
 	print("++++++++++++++++++++++++++++++++++++++++")
